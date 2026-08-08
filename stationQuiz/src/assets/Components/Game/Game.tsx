@@ -2,14 +2,14 @@ import { useState } from "react";
 import Classes from "./Game.module.scss";
 import { OperatorBadge } from "../SubComponents/OperatorBadge/operatorBadge";
 import { stationData } from '../../../data/StationData'
+import Map from "./Map/Map";
 
 export const Game = () => {
   const [guessedStations, setGuessedstations] = useState(0);
-
+  const [view, setView] = useState('list')
   const [guess, setGuess] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(guess);
     const matchedStation = stationArray.find(
       (station) =>
         station.name.toLowerCase() === guess.toLowerCase() ||
@@ -30,7 +30,7 @@ export const Game = () => {
   };
   const [stationArray, setStationArray] = useState(stationData);
   return (
-    <div style={{ width: "50vw" }}>
+    <div style={{ width: "100vw" }}>
       <form onSubmit={onSubmit}>
         <input
           type="text"
@@ -44,22 +44,32 @@ export const Game = () => {
         value={guessedStations}
       ></progress>
       <p>{guessedStations}/14</p>
-      {stationArray.map((station, idx) => (
-        <div
-          key={idx}
-          style={station.found ? { backgroundColor: "green" } : {}}
-          className={Classes.StationPoint}
-        >
-          {station.found && station.displayName}
-          {station.found && (
-            <div className={Classes.BadgeContainer}>
-              {station.operators.map((Operator, idx) => (
-                <OperatorBadge key={idx} operator={Operator} />
-              ))}
+      <div>
+        <button onClick={() => setView("list")}>List view</button>
+        <button onClick={() => setView("map")}>Map view</button>
+      </div>
+      {view === 'list' ? <div>
+        {
+          stationArray.map((station, idx) => (
+            <div
+              key={idx}
+              style={station.found ? { backgroundColor: "green" } : {}}
+              className={Classes.StationPoint}
+            >
+              {station.found && station.displayName}
+              {station.found && (
+                <div className={Classes.BadgeContainer}>
+                  {station.operators.map((operator, idx) => (
+                    <OperatorBadge key={idx} operator={operator} />
+                  ))}
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      ))}
+          ))
+        } </div>
+        :
+        <Map />}
+      
     </div>
   );
 };
