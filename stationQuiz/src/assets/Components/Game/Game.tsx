@@ -33,22 +33,29 @@ export const Game = () => {
 
   return (
     <div style={{ width: "100vw" }}>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          value={guess}
-          onChange={(e) => setGuess(e.target.value)}
-        ></input>
-      </form>
-      <progress
-        style={{ accentColor: "purple" }}
-        max={14}
-        value={guessedStations}
-      ></progress>
-      <p>{guessedStations}/14</p>
-      <div>
-        <button onClick={() => setView("list")}>List view</button>
-        <button onClick={() => setView("map")}>Map view</button>
+      <div className={Classes.TopBarContainer}>
+        <div className={Classes.ButtonContainer}>
+          <button onClick={() => setView("list")}>List view</button>
+          <button onClick={() => setView("map")}>Map view</button>
+        </div>
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            value={guess}
+            onChange={(e) => setGuess(e.target.value)}
+            className={Classes.GuessInput}
+          ></input>
+        </form>
+        <div className={Classes.ProgressContainer}>
+          <progress
+            style={{ accentColor: "purple" }}
+            max={stationData.length}
+            value={guessedStations}
+          ></progress>
+          <p>
+            {guessedStations}/{stationData.length}
+          </p>
+        </div>
       </div>
       {view === "list" ? (
         <div>

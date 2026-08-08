@@ -1,3 +1,75 @@
+// export const stationData = [
+//   {
+//     name: "Lincoln Central",
+//     displayName: "Lincoln",
+//     operators: ["LNER", "EMR", "northern"],
+//     managedBy: "EMR",
+//     location: {
+//       lat: 53.2265,
+//       lon: -0.5401,
+//     },
+//     found: false,
+//   },
+//   {
+//     name: "Hykeham",
+//     displayName: "Hykeham",
+//     operators: ["EMR"],
+//     managedBy: "EMR",
+//     location: {
+//       lat: 53.1952,
+//       lon: -0.5999,
+//     },
+//     found: false,
+//   },
+//   {
+//     name: "Swinderby",
+//     displayName: "Swinderby",
+//     operators: ["EMR"],
+//     managedBy: "EMR",
+//     location: {
+//       lat: 53.1694,
+//       lon: -0.7027,
+//     },
+//     found: false,
+//   },
+//   {
+//     name: "Collingham",
+//     displayName: "Collingham",
+//     operators: ["EMR"],
+//     managedBy: "EMR",
+//     location: {
+//       lat: 53.1441,
+//       lon: -0.7504,
+//     },
+//     found: false,
+//   },
+//   {
+//     name: "Newark Castle",
+//     displayName: "Newark Castle",
+//     operators: ["EMR"],
+//     managedBy: "EMR",
+//     location: {
+//       lat: 53.08,
+//       lon: -0.8132,
+//     },
+//     found: false,
+//   },
+//   {
+//     name: "Newark Northgate",
+//     displayName: "Newark Northgate",
+//     operators: ["LNER", "EMR"],
+//     managedBy: "LNER",
+//     location: {
+//       lat: 53.0819,
+//       lon: -0.7999,
+//     },
+//     found: false,
+//   },
+// ];
+
+
+
+
 export const stationData = [
   {
     name: "Lincoln Central",
@@ -392,6 +464,129 @@ export const stationData = [
     location: {
       lat: 53.1381,
       lon: -1.5589,
+    },
+    found: false,
+  },
+  {
+    name: "Peartree",
+    displayName: "Peartree",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 52.8972,
+      lon: -1.4728,
+    },
+    found: false,
+  },
+  {
+    name: "Tutbury and Hatton",
+    displayName: "Tutbury & Hatton",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 52.8639,
+      lon: -1.6819,
+    },
+    found: false,
+  },
+  {
+    name: "Uttoxeter",
+    displayName: "Uttoxeter",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 52.8968,
+      lon: -1.8575,
+    },
+    found: false,
+  },
+  {
+    name: "Blythe Bridge",
+    displayName: "Blythe Bridge",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 52.968,
+      lon: -2.067,
+    },
+    found: false,
+  },
+  {
+    name: "Longton",
+    displayName: "Longton",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 52.99,
+      lon: -2.1369,
+    },
+    found: false,
+  },
+  {
+    name: "Stoke-on-Trent",
+    displayName: "Stoke-on-Trent",
+    operators: [
+      "avantiWestCoast",
+      "EMR",
+      "crossCountry",
+      "northern",
+      "westMidlandsRailway",
+    ],
+    managedBy: "avantiWestCoast",
+    location: {
+      lat: 53.0081,
+      lon: -2.1811,
+    },
+    found: false,
+  },
+  {
+    name: "Longport",
+    displayName: "Longport",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 53.0419,
+      lon: -2.2161,
+    },
+    found: false,
+  },
+  {
+    name: "Kidsgrove",
+    displayName: "Kidsgrove",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 53.0863,
+      lon: -2.2446,
+    },
+    found: false,
+  },
+  {
+    name: "Alsager",
+    displayName: "Alsager",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: 53.0928,
+      lon: -2.2981,
+    },
+    found: false,
+  },
+  {
+    name: "Crewe",
+    displayName: "Crewe",
+    operators: [
+      "avantiWestCoast",
+      "EMR",
+      "crossCountry",
+      "northern",
+      "WMR",
+      "TFW",
+    ],
+    managedBy: "avantiWestCoast",
+    location: {
+      lat: 53.089,
+      lon: -2.433,
     },
     found: false,
   },
