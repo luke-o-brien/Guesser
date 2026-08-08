@@ -1,0 +1,156 @@
+export const stationData = [
+  {
+    name: "Lincoln Central",
+    displayName: "Lincoln",
+    operators: ["LNER", "EMR", "northern"],
+    managedBy: "EMR",
+    location: {
+      lat: "53.2265",
+      lon: "-0.5401",
+    },
+    found: false,
+  },
+  {
+    name: "Hykeham",
+    displayName: "Hykeham",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "53.1952",
+      lon: "-0.5999",
+    },
+    found: false,
+  },
+  {
+    name: "Swinderby",
+    displayName: "Swinderby",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "53.1694",
+      lon: "-0.7027",
+    },
+    found: false,
+  },
+  {
+    name: "Collingham",
+    displayName: "Collingham",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "53.1441",
+      lon: "-0.7504",
+    },
+    found: false,
+  },
+  {
+    name: "Newark Castle",
+    displayName: "Newark Castle",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "53.0800",
+      lon: "-0.8132",
+    },
+    found: false,
+  },
+  {
+    name: "Newark Northgate",
+    displayName: "Newark Northgate",
+    operators: ["LNER", "EMR"],
+    managedBy: "LNER",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Rolleston",
+    displayName: "Rolleston",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Fiskerton",
+    displayName: "Fiskerton",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Bleasby",
+    displayName: "Bleasby",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Thurgarton",
+    displayName: "Thurgarton",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Lowdham",
+    displayName: "Lowdham",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Burton Joyce",
+    displayName: "Burton Joyce",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Carlton",
+    displayName: "Carlton",
+    operators: ["EMR"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+  {
+    name: "Nottingham",
+    displayName: "Nottingham",
+    operators: ["EMR", "crossCountry", "northern"],
+    managedBy: "EMR",
+    location: {
+      lat: "",
+      lon: "",
+    },
+    found: false,
+  },
+];
