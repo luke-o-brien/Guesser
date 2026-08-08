@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Classes from "./Game.module.scss";
+import { OperatorBadge } from "../SubComponents/OperatorBadge/operatorBadge";
 
 export const Game = () => {
   const [guessedStations, setGuessedstations] = useState(0);
@@ -173,7 +174,7 @@ export const Game = () => {
     {
       name: "Nottingham",
       displayName: "Nottingham",
-      operators: ["EMR", "XC", "northern" ],
+      operators: ["EMR", "crossCountry", "northern" ],
       managedBy: "EMR",
       location: {
         lat: "",
@@ -183,17 +184,7 @@ export const Game = () => {
     },
   ]);
   return (
-    <div>
-      <p>{guessedStations}</p>
-      {castleLine.map((station, idx) => (
-        <div
-          key={idx}
-          style={station.found ? { backgroundColor: "green" } : {}}
-          className={Classes.StationPoint}
-        >
-          {station.found && station.displayName}
-        </div>
-      ))}
+    <div style={{width: '50vw'}}>
       <form onSubmit={onSubmit}>
         <input
           type="text"
@@ -201,6 +192,28 @@ export const Game = () => {
           onChange={(e) => setGuess(e.target.value)}
         ></input>
       </form>
+      <progress
+        style={{ accentColor: "purple" }}
+        max={14}
+        value={guessedStations}
+      ></progress>
+      <p>{guessedStations}/14</p>
+      {castleLine.map((station, idx) => (
+        <div
+          key={idx}
+          style={station.found ? { backgroundColor: "green" } : {}}
+          className={Classes.StationPoint}
+        >
+          {station.found && station.displayName}
+          {station.found && (
+            <div className={Classes.BadgeContainer}>
+              {station.operators.map((Operator, idx) => (
+                <OperatorBadge key={idx} operator={Operator} />
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   );
 };

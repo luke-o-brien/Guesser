@@ -12,6 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+
+  --EMR: #4c2f48  ;
+  --LNER: #ce132e;
+  --northern: #262262;
+  --crossCountry: #ca123f;
 }
 
 * {

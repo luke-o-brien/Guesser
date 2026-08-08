@@ -4,6 +4,15 @@
   border: solid #f5f5f5 1px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 32px;
+  padding: 0px 10px;
+}
+
+.BadgeContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
 }
