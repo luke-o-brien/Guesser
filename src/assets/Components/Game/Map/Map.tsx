@@ -35,8 +35,8 @@ function Map({ stationData }) {
       style: "mapbox://styles/mapbox/dark-v11",
       center: [-0.8132, 53.08],
       zoom: 9,
-      minZoom: 5,
-      maxZoom: 15,
+      minZoom: 3,
+      maxZoom: 13,
     });
 
     mapRef.current.on("style.load", () => {
