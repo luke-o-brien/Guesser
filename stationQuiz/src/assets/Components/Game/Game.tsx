@@ -5,7 +5,9 @@ import { stationData } from "../../../data/StationData";
 import Map from "./Map/Map";
 
 export const Game = () => {
-  const [stationArray, setStationArray] = useState(stationData);
+
+  const localStorageData = localStorage.getItem('gameData')
+  const [stationArray, setStationArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
   const [guessedStations, setGuessedstations] = useState(0);
   const [view, setView] = useState("list");
   const [guess, setGuess] = useState("");
@@ -20,12 +22,12 @@ export const Game = () => {
 
     if (matchedStation && matchedStation.found !== true) {
       setGuessedstations(guessedStations + 1);
-      setStationArray(
-        stationArray.map((station) =>
+      const updatedArray = stationArray.map((station) =>
           station === matchedStation ? { ...station, found: true } : station,
-        ),
-      );
+      ) 
+      setStationArray(updatedArray);
       setGuess("");
+      localStorage.setItem("gameData", JSON.stringify(updatedArray));
     } else {
       console.log("not found");
     }

@@ -30,8 +30,7 @@ function Map({ stationData }) {
     if (!mapContainerRef.current) return;
 
     mapRef.current = new mapboxgl.Map({
-      accessToken:
-        "placeholder",
+      accessToken: `${import.meta.env.VITE_MAPBOX_API_KEY}`,
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/dark-v11",
       center: [-0.8132, 53.08],
