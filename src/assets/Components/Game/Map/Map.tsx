@@ -33,8 +33,8 @@ function Map({ stationData }) {
       accessToken: `${import.meta.env.VITE_MAPBOX_API_KEY}`,
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/dark-v11",
-      center: [-0.8132, 53.08],
-      zoom: 9,
+      center: [-0.1281, 51.508],
+      zoom: 3,
       minZoom: 3,
       maxZoom: 13,
     });
@@ -68,9 +68,9 @@ function Map({ stationData }) {
             "interpolate",
             ["linear"],
             ["zoom"],
-            4,2,
-            8,4,
-            12,8,
+            4,3,
+            8,8,
+            12,12,
             16,12,
           ],
           "circle-color": [
