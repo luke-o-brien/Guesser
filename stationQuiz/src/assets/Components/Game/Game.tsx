@@ -1,13 +1,15 @@
 import { useState } from "react";
 import Classes from "./Game.module.scss";
 import { OperatorBadge } from "../SubComponents/OperatorBadge/operatorBadge";
-import { stationData } from '../../../data/StationData'
+import { stationData } from "../../../data/StationData";
 import Map from "./Map/Map";
 
 export const Game = () => {
+  const [stationArray, setStationArray] = useState(stationData);
   const [guessedStations, setGuessedstations] = useState(0);
-  const [view, setView] = useState('list')
+  const [view, setView] = useState("list");
   const [guess, setGuess] = useState("");
+
   const onSubmit = (e) => {
     e.preventDefault();
     const matchedStation = stationArray.find(
@@ -15,9 +17,9 @@ export const Game = () => {
         station.name.toLowerCase() === guess.toLowerCase() ||
         station.displayName.toLowerCase() === guess.toLowerCase(),
     );
+
     if (matchedStation && matchedStation.found !== true) {
       setGuessedstations(guessedStations + 1);
-      matchedStation.found = true;
       setStationArray(
         stationArray.map((station) =>
           station === matchedStation ? { ...station, found: true } : station,
@@ -28,7 +30,7 @@ export const Game = () => {
       console.log("not found");
     }
   };
-  const [stationArray, setStationArray] = useState(stationData);
+
   return (
     <div style={{ width: "100vw" }}>
       <form onSubmit={onSubmit}>
@@ -48,9 +50,9 @@ export const Game = () => {
         <button onClick={() => setView("list")}>List view</button>
         <button onClick={() => setView("map")}>Map view</button>
       </div>
-      {view === 'list' ? <div>
-        {
-          stationArray.map((station, idx) => (
+      {view === "list" ? (
+        <div>
+          {stationArray.map((station, idx) => (
             <div
               key={idx}
               style={station.found ? { backgroundColor: "green" } : {}}
@@ -65,11 +67,11 @@ export const Game = () => {
                 </div>
               )}
             </div>
-          ))
-        } </div>
-        :
-        <Map />}
-      
+          ))}
+        </div>
+      ) : (
+        <Map stationData={stationArray} />
+      )}
     </div>
   );
 };
