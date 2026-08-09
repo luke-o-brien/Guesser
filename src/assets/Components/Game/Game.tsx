@@ -7,12 +7,15 @@ import { TopBar } from "./Header/Header";
 
 export const Game = () => {
 
+  const userPreferenceData = localStorage.getItem('userPreferances')
   // const localStorageData = localStorage.getItem('gameData')
+
   const [stationArray, setStationArray] = useState(stationData);
   // const [stationArray, setStationArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
   const [foundCountries, setFoundCountries] = useState(0);
   const [view, setView] = useState("map");
   const [guess, setGuess] = useState("");
+  const [userPreferences, setUserPreferences] = useState(userPreferenceData ? JSON.parse(userPreferenceData) : window.matchMedia("(prefers-color-scheme: dark)").matches ? { theme: 'dark'} : { theme: 'light'} )
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -37,7 +40,15 @@ export const Game = () => {
 
   return (
     <div style={{ width: "100vw" }}>
-      <TopBar setView={setView} onSubmit={onSubmit} setGuess={setGuess} stationData={stationData} foundCountries={foundCountries} guess={guess} />
+      <TopBar
+        onSubmit={onSubmit}
+        setGuess={setGuess}
+        stationData={stationData}
+        foundCountries={foundCountries}
+        guess={guess}
+        userPreferences={userPreferences}
+        setUserPreferences={setUserPreferences}
+      />
       {view === "list" ? (
         <div>
           {stationArray.map((station, idx) => (
@@ -58,7 +69,7 @@ export const Game = () => {
           ))}
         </div>
       ) : (
-        <Map stationData={stationArray} />
+        <Map stationData={stationArray} userPreferences={userPreferences} />
       )}
     </div>
   );

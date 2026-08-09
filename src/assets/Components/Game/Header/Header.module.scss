@@ -11,18 +11,46 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 
 .TopBarContainer {
+  position: absolute;
+  top: 20px;
+  z-index: 99;
   display: flex; 
+  background-color:#242424;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  align-items: center;
+  margin-left: 2.5vw;
+  width: 95vw;
   padding: 5px 0px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 10px 0px;
 }
 
 .GuessInput {
-  width: 600px;
-  height: 32px;
+  width: 500px;
+  height: 36px;
+  background-color: rgb(23, 23, 23);
+  border: none;
+  border-radius: 4px;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+
+.TopBarButton {
+background: transparent;
+height: 40px;
+font-size: 14px;
+border-radius: 4px;
+border: none;
+padding: 5px 10px;
+}
+
+.TopBarButton:hover {
+  background-color: #363636;
+  cursor: pointer;
 }
