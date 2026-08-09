@@ -38,6 +38,11 @@ export const Game = () => {
     }
   };
 
+  const resetGame = () => {
+    setStationArray(stationData)
+    setFoundCountries(0)
+  }
+
   return (
     <div style={{ width: "100vw" }}>
       <TopBar
@@ -48,6 +53,7 @@ export const Game = () => {
         guess={guess}
         userPreferences={userPreferences}
         setUserPreferences={setUserPreferences}
+        resetGame={resetGame}
       />
       {view === "list" ? (
         <div>

@@ -8,15 +8,27 @@ export const TopBar = ({
   guess,
   userPreferences,
   setUserPreferences,
+  resetGame
 }) => {
   return (
     <div className={Classes.TopBarContainer}>
       <div className={Classes.ButtonsContainer}>
         <button
           className={Classes.TopBarButton}
-          onClick={() => setUserPreferences(userPreferences.theme === "light" ? { theme: "dark" } : {theme: "light"})}
+          onClick={() =>
+            setUserPreferences(
+              userPreferences.theme === "light"
+                ? { theme: "dark" }
+                : { theme: "light" },
+            )
+          }
         >
           Toggle Theme
+        </button>
+        <button
+          className={Classes.TopBarButton}
+          onClick={resetGame}>
+          Reset
         </button>
       </div>
       <form onSubmit={onSubmit}>
@@ -29,14 +41,17 @@ export const TopBar = ({
         ></input>
       </form>
       <div className={Classes.ProgressContainer}>
+        <div className={Classes.ProgressCount}>
+          <p>Progress:</p>
+          <p>
+            {foundCountries} / {stationData.length}
+          </p>
+        </div>
         <progress
-          style={{ accentColor: "purple" }}
+          style={{ accentColor: "green", width: "120px", height: "18px" }}
           max={stationData.length}
           value={foundCountries}
         ></progress>
-        <p>
-          {foundCountries}/{stationData.length}
-        </p>
       </div>
     </div>
   );
