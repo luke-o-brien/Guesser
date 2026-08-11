@@ -8,7 +8,7 @@ export const TopBar = ({
   guess,
   userPreferences,
   setUserPreferences,
-  resetGame
+  setResetIsOpen
 }) => {
   return (
     <div className={Classes.TopBarContainer}>
@@ -27,7 +27,7 @@ export const TopBar = ({
         </button>
         <button
           className={Classes.TopBarButton}
-          onClick={resetGame}>
+          onClick={() => setResetIsOpen(true)}>
           Reset
         </button>
       </div>

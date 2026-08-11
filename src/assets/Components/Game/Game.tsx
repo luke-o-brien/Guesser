@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Classes from "./Game.module.scss";
-import { OperatorBadge } from "../SubComponents/OperatorBadge/operatorBadge";
 import { stationData } from "../../../data/StationData";
 import Map from "./Map/Map";
 import { TopBar } from "./Header/Header";
+import { ConfirmationDialog } from "./ConfirmationDialog/ConfirmationDialog";
 
 export const Game = () => {
 
@@ -11,6 +11,7 @@ export const Game = () => {
   // const localStorageData = localStorage.getItem('gameData')
 
   const [stationArray, setStationArray] = useState(stationData);
+  const [resetIsOpen, setResetIsOpen] = useState(false)
   // const [stationArray, setStationArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
   const [foundCountries, setFoundCountries] = useState(0);
   const [view, setView] = useState("map");
@@ -53,8 +54,9 @@ export const Game = () => {
         guess={guess}
         userPreferences={userPreferences}
         setUserPreferences={setUserPreferences}
-        resetGame={resetGame}
+        setResetIsOpen={setResetIsOpen}
       />
+      {resetIsOpen && <ConfirmationDialog type={'reset'} cancelAction={setResetIsOpen} confirmAction={resetGame} />}
       {view === "list" ? (
         <div>
           {stationArray.map((station, idx) => (
