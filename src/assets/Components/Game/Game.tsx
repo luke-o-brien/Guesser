@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Classes from "./Game.module.scss";
-import { stationData } from "../../../data/StationData";
+import gameData from '../../../data/GameData.json'
 import Map from "./Map/Map";
 import { TopBar } from "./Header/Header";
 import { ConfirmationDialog } from "./ConfirmationDialog/ConfirmationDialog";
@@ -10,17 +9,16 @@ export const Game = () => {
   const userPreferenceData = localStorage.getItem('userPreferances')
   // const localStorageData = localStorage.getItem('gameData')
 
-  const [stationArray, setStationArray] = useState(stationData);
+  const [gameArray, setGameArray] = useState(gameData);
   const [resetIsOpen, setResetIsOpen] = useState(false)
-  // const [stationArray, setStationArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
+  // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
   const [foundCountries, setFoundCountries] = useState(0);
-  const [view, setView] = useState("map");
   const [guess, setGuess] = useState("");
   const [userPreferences, setUserPreferences] = useState(userPreferenceData ? JSON.parse(userPreferenceData) : window.matchMedia("(prefers-color-scheme: dark)").matches ? { theme: 'dark'} : { theme: 'light'} )
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const matchedStation = stationArray.find(
+    const matchedStation = gameArray.find(
       (station) =>
         station.name.toLowerCase() === guess.toLowerCase() ||
         station.displayName.toLowerCase() === guess.toLowerCase(),
@@ -28,10 +26,10 @@ export const Game = () => {
 
     if (matchedStation && matchedStation.found !== true) {
       setFoundCountries(foundCountries + 1);
-      const updatedArray = stationArray.map((station) =>
+      const updatedArray = gameArray.map((station) =>
           station === matchedStation ? { ...station, found: true } : station,
       ) 
-      setStationArray(updatedArray);
+      setGameArray(updatedArray);
       setGuess("");
       // localStorage.setItem("gameData", JSON.stringify(updatedArray));
     } else {
@@ -40,7 +38,7 @@ export const Game = () => {
   };
 
   const resetGame = () => {
-    setStationArray(stationData)
+    setGameArray(gameData)
     setFoundCountries(0)
   }
 
@@ -49,7 +47,7 @@ export const Game = () => {
       <TopBar
         onSubmit={onSubmit}
         setGuess={setGuess}
-        stationData={stationData}
+        stationData={gameData}
         foundCountries={foundCountries}
         guess={guess}
         userPreferences={userPreferences}
@@ -57,28 +55,7 @@ export const Game = () => {
         setResetIsOpen={setResetIsOpen}
       />
       {resetIsOpen && <ConfirmationDialog type={'reset'} cancelAction={setResetIsOpen} confirmAction={resetGame} />}
-      {view === "list" ? (
-        <div>
-          {stationArray.map((station, idx) => (
-            <div
-              key={idx}
-              style={station.found ? { backgroundColor: "green" } : {}}
-              className={Classes.StationPoint}
-            >
-              {station.found && station.displayName}
-              {station.found && (
-                <div className={Classes.BadgeContainer}>
-                  {station.operators.map((operator, idx) => (
-                    <OperatorBadge key={idx} operator={operator} />
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      ) : (
-        <Map stationData={stationArray} userPreferences={userPreferences} />
-      )}
+      <Map stationData={gameArray} userPreferences={userPreferences} />
     </div>
   );
 };

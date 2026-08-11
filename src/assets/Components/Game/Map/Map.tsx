@@ -214,7 +214,7 @@ function Map({ stationData, userPreferences }) {
     <div
       ref={mapContainerRef}
       style={{
-        height: "800px",
+        height: "100vh",
         width: "100vw",
       }}
     />

@@ -1,4 +1,4 @@
-import Classses from "./ConfirmationDialog.module.scss";
+import Classes from "./ConfirmationDialog.module.scss";
 
 type ConfirmationDialogType = "reset" | "quit";
 
@@ -15,9 +15,9 @@ export const ConfirmationDialog = ({
 }: ConfirmationDialogProps) => {
 
   return (
-    <div className={Classses.Dialog}>
-      <div className={Classses.DialogContent}>
-        <p className={Classses.DialogHeading}>
+    <div className={Classes.Dialog}>
+      <div className={Classes.DialogContent}>
+        <p className={Classes.DialogHeading}>
           {type === "reset"
             ? "Reset progress"
             : type === "quit"
@@ -25,7 +25,7 @@ export const ConfirmationDialog = ({
               : ""}
         </p>
         {type === "reset" && (
-          <p className={Classses.Text}>
+          <p className={Classes.Text}>
             You are about to reset the game this action cannot be undone. You
             will lose your progress. Are you sure you wish to proceed?
           </p>
@@ -36,17 +36,17 @@ export const ConfirmationDialog = ({
             progress
           </p>
         )}
-        <div className={Classses.ButtonsContainer}>
+        <div className={Classes.ButtonsContainer}>
           <button
-            className={Classses.CancelButton}
+            className={Classes.CancelButton}
             onClick={() => cancelAction(false)}
           >
             Cancel
           </button>
           <button
-            className={Classses.ActionButton}
+            className={Classes.ActionButton}
             onClick={() => {
-              confirmAction();
+              confirmAction?.();
               cancelAction(false);
             }}
           >
