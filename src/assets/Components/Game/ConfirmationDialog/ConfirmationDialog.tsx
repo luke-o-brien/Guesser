@@ -15,8 +15,7 @@ export const ConfirmationDialog = ({
 }: ConfirmationDialogProps) => {
 
   return (
-    <div className={Classes.Dialog}>
-      <div className={Classes.DialogContent}>
+    <>
         <p className={Classes.DialogHeading}>
           {type === "reset"
             ? "Reset progress"
@@ -53,7 +52,6 @@ export const ConfirmationDialog = ({
             {type === "reset" ? "Reset" : type === "quit" ? "quit " : ""}
           </button>
         </div>
-      </div>
-    </div>
+      </>
   );
 };

@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const WinnerDialog = ({reset, setHasWon}) => {
   return (
-    <div className={Classes.Dialog}>
-      <div className={Classes.DialogContent}>
+    <>
         <p className={Classes.DialogHeading}>You Won</p>
         <p className={Classes.Text}>
           You correctly guess all the european capitals congrats.
@@ -19,7 +18,6 @@ export const WinnerDialog = ({reset, setHasWon}) => {
             </button>
           </Link>
         </div>
-      </div>
-    </div>
+    </>
   );
 }

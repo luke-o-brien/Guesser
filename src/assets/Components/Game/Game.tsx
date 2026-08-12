@@ -1,8 +1,9 @@
 import { useState } from "react";
-import gameData from '../../../data/GameData.json'
-import Map from "./Map/Map";
-import { TopBar } from "./Header/Header";
+import gameData from '../../../data/GameData.json';
+import { Dialog } from "../../../SharedComponents/Dialog/Dialog";
 import { ConfirmationDialog } from "./ConfirmationDialog/ConfirmationDialog";
+import { TopBar } from "./Header/Header";
+import Map from "./Map/Map";
 import { WinnerDialog } from "./WinnerDialog/WinnerDialog";
 
 export const Game = () => {
@@ -60,8 +61,16 @@ export const Game = () => {
         setUserPreferences={setUserPreferences}
         setResetIsOpen={setResetIsOpen}
       />
-      {resetIsOpen && <ConfirmationDialog type={'reset'} cancelAction={setResetIsOpen} confirmAction={resetGame} />}
-      {hasWon && <WinnerDialog reset={resetGame} setHasWon={setHasWon} />}
+      {resetIsOpen &&
+        <Dialog>
+          <ConfirmationDialog type={'reset'} cancelAction={setResetIsOpen} confirmAction={resetGame} />
+        </Dialog>}
+      {
+        hasWon &&
+        <Dialog>
+          <WinnerDialog reset={resetGame} setHasWon={setHasWon} />
+        </Dialog>
+      }
       <Map stationData={gameArray} userPreferences={userPreferences}/>
     </div>
   );
