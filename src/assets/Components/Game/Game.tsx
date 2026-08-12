@@ -3,6 +3,7 @@ import gameData from '../../../data/GameData.json'
 import Map from "./Map/Map";
 import { TopBar } from "./Header/Header";
 import { ConfirmationDialog } from "./ConfirmationDialog/ConfirmationDialog";
+import { WinnerDialog } from "./WinnerDialog/WinnerDialog";
 
 export const Game = () => {
 
@@ -14,6 +15,7 @@ export const Game = () => {
   // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
   const [foundCountries, setFoundCountries] = useState(0);
   const [guess, setGuess] = useState("");
+  const [hasWon, setHasWon] = useState(false);
   const [userPreferences, setUserPreferences] = useState(userPreferenceData ? JSON.parse(userPreferenceData) : window.matchMedia("(prefers-color-scheme: dark)").matches ? { theme: 'dark'} : { theme: 'light'} )
 
   const onSubmit = (e) => {
@@ -29,6 +31,10 @@ export const Game = () => {
       const updatedArray = gameArray.map((station) =>
           station === matchedStation ? { ...station, found: true } : station,
       ) 
+      if (foundCountries + 1 === gameArray.length) {
+        console.log('won')
+        setHasWon(true)
+      }
       setGameArray(updatedArray);
       setGuess("");
       // localStorage.setItem("gameData", JSON.stringify(updatedArray));
@@ -55,7 +61,8 @@ export const Game = () => {
         setResetIsOpen={setResetIsOpen}
       />
       {resetIsOpen && <ConfirmationDialog type={'reset'} cancelAction={setResetIsOpen} confirmAction={resetGame} />}
-      <Map stationData={gameArray} userPreferences={userPreferences} />
+      {hasWon && <WinnerDialog reset={resetGame} setHasWon={setHasWon} />}
+      <Map stationData={gameArray} userPreferences={userPreferences}/>
     </div>
   );
 };
