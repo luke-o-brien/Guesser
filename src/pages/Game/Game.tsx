@@ -1,23 +1,28 @@
 import { useState } from "react";
-import gameData from '../../../data/GameData.json';
-import { Dialog } from "../../../SharedComponents/Dialog/Dialog";
-import { ConfirmationDialog } from "./ConfirmationDialog/ConfirmationDialog";
-import { TopBar } from "./Header/Header";
-import Map from "./Map/Map";
-import { WinnerDialog } from "./WinnerDialog/WinnerDialog";
+import gameData from "../../data/GameData.json";
+import { Dialog } from "../../SharedComponents/Dialog/Dialog";
+import { ConfirmationDialog } from "../../assets/Components/Game/ConfirmationDialog/ConfirmationDialog";
+import { TopBar } from "../../assets/Components/Game/Header/Header";
+import Map from "../../assets/Components/Game/Map/Map";
+import { WinnerDialog } from "../../assets/Components/Game/WinnerDialog/WinnerDialog";
 
 export const Game = () => {
-
-  const userPreferenceData = localStorage.getItem('userPreferances')
+  const userPreferenceData = localStorage.getItem("userPreferances");
   // const localStorageData = localStorage.getItem('gameData')
 
   const [gameArray, setGameArray] = useState(gameData);
-  const [resetIsOpen, setResetIsOpen] = useState(false)
+  const [resetIsOpen, setResetIsOpen] = useState(false);
   // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
   const [foundCountries, setFoundCountries] = useState(0);
   const [guess, setGuess] = useState("");
   const [hasWon, setHasWon] = useState(false);
-  const [userPreferences, setUserPreferences] = useState(userPreferenceData ? JSON.parse(userPreferenceData) : window.matchMedia("(prefers-color-scheme: dark)").matches ? { theme: 'dark'} : { theme: 'light'} )
+  const [userPreferences, setUserPreferences] = useState(
+    userPreferenceData
+      ? JSON.parse(userPreferenceData)
+      : window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? { theme: "dark" }
+        : { theme: "light" },
+  );
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -30,11 +35,11 @@ export const Game = () => {
     if (matchedStation && matchedStation.found !== true) {
       setFoundCountries(foundCountries + 1);
       const updatedArray = gameArray.map((station) =>
-          station === matchedStation ? { ...station, found: true } : station,
-      ) 
+        station === matchedStation ? { ...station, found: true } : station,
+      );
       if (foundCountries + 1 === gameArray.length) {
-        console.log('won')
-        setHasWon(true)
+        console.log("won");
+        setHasWon(true);
       }
       setGameArray(updatedArray);
       setGuess("");
@@ -45,9 +50,9 @@ export const Game = () => {
   };
 
   const resetGame = () => {
-    setGameArray(gameData)
-    setFoundCountries(0)
-  }
+    setGameArray(gameData);
+    setFoundCountries(0);
+  };
 
   return (
     <div style={{ width: "100vw" }}>
@@ -61,17 +66,21 @@ export const Game = () => {
         setUserPreferences={setUserPreferences}
         setResetIsOpen={setResetIsOpen}
       />
-      {resetIsOpen &&
+      {resetIsOpen && (
         <Dialog>
-          <ConfirmationDialog type={'reset'} cancelAction={setResetIsOpen} confirmAction={resetGame} />
-        </Dialog>}
-      {
-        hasWon &&
+          <ConfirmationDialog
+            type={"reset"}
+            cancelAction={setResetIsOpen}
+            confirmAction={resetGame}
+          />
+        </Dialog>
+      )}
+      {hasWon && (
         <Dialog>
           <WinnerDialog reset={resetGame} setHasWon={setHasWon} />
         </Dialog>
-      }
-      <Map stationData={gameArray} userPreferences={userPreferences}/>
+      )}
+      <Map stationData={gameArray} userPreferences={userPreferences} />
     </div>
   );
 };

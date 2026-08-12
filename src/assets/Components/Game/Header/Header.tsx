@@ -31,6 +31,7 @@ export const TopBar = ({
         </button>
         <button
           className={Classes.TopBarButton}
+          disabled={foundCountries === 0}
           onClick={() => setResetIsOpen(true)}
         >
           Reset
