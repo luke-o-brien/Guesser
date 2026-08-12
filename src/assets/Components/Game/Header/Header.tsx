@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Classes from "./Header.module.scss"
 
 export const TopBar = ({
@@ -13,6 +14,9 @@ export const TopBar = ({
   return (
     <div className={Classes.TopBarContainer}>
       <div className={Classes.ButtonsContainer}>
+        <Link to="/">
+          <button className={Classes.TopBarButton}>Exit</button>
+        </Link>
         <button
           className={Classes.TopBarButton}
           onClick={() =>
@@ -27,7 +31,8 @@ export const TopBar = ({
         </button>
         <button
           className={Classes.TopBarButton}
-          onClick={() => setResetIsOpen(true)}>
+          onClick={() => setResetIsOpen(true)}
+        >
           Reset
         </button>
       </div>

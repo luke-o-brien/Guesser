@@ -61,3 +61,11 @@ padding: 5px 10px;
   background-color: #363636;
   cursor: pointer;
 }
+
+
+@media (max-width: 800px) {
+  .GuessInput {
+    width: 10px;
+  }
+
+}

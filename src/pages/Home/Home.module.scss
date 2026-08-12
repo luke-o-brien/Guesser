@@ -1,0 +1,47 @@
+.PageContent {
+  width: 90vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+  padding: 20px 0px;
+}
+
+
+.TitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ButtonLink {
+  text-decoration: none;
+}
+
+.NewGameButton {
+  display: flex;
+  flex-direction: column;
+  border: 1px gray dashed;
+  background: transparent;
+  gap: 32px;
+  border-radius: 16px;
+  padding: 32px;
+  text-decoration: none;
+}
+
+.NewGameButton:hover {
+  cursor: pointer;
+  background-color: rgb(52, 52, 52);
+}
+
+.NewGameButtonHeader {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.NewGameButtonSubHeader {
+  font-size: 18px;
+  text-decoration: none;
+}
