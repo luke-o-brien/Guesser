@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import Classes from './Home.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export const Home = () => {
   return (
@@ -10,6 +12,7 @@ export const Home = () => {
       </div>
       <Link to="/game" className={Classes.ButtonLink}>
         <button className={Classes.NewGameButton}>
+          <FontAwesomeIcon icon={faPlay}/>
           <p className={Classes.NewGameButtonHeader}>Start New Game</p>
           <p className={Classes.NewGameButtonSubHeader}>
             Find all capitals of Europe
