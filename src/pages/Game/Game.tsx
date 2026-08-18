@@ -5,6 +5,7 @@ import { ConfirmationDialog } from "../../assets/Components/Game/ConfirmationDia
 import { TopBar } from "../../assets/Components/Game/Header/Header";
 import Map from "../../assets/Components/Game/Map/Map";
 import { WinnerDialog } from "../../assets/Components/Game/WinnerDialog/WinnerDialog";
+import { ProgressDialog } from "../../assets/Components/Game/ProgressDialog/ProgressDialog";
 
 export const Game = () => {
   const userPreferenceData = localStorage.getItem("userPreferances");
@@ -12,8 +13,9 @@ export const Game = () => {
 
   const [gameArray, setGameArray] = useState(gameData);
   const [resetIsOpen, setResetIsOpen] = useState(false);
+  const [progressIsOpen, setProgressIsOpen] = useState(false);
   // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
-  const [foundCountries, setFoundCountries] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [guess, setGuess] = useState("");
   const [hasWon, setHasWon] = useState(false);
   const [userPreferences, setUserPreferences] = useState(
@@ -33,11 +35,11 @@ export const Game = () => {
     );
 
     if (matchedStation && matchedStation.found !== true) {
-      setFoundCountries(foundCountries + 1);
+      setProgress(progress + 1);
       const updatedArray = gameArray.map((station) =>
         station === matchedStation ? { ...station, found: true } : station,
       );
-      if (foundCountries + 1 === gameArray.length) {
+      if (progress + 1 === gameArray.length) {
         console.log("won");
         setHasWon(true);
       }
@@ -51,7 +53,7 @@ export const Game = () => {
 
   const resetGame = () => {
     setGameArray(gameData);
-    setFoundCountries(0);
+    setProgress(0);
   };
 
   return (
@@ -60,11 +62,12 @@ export const Game = () => {
         onSubmit={onSubmit}
         setGuess={setGuess}
         stationData={gameData}
-        foundCountries={foundCountries}
+        progress={progress}
         guess={guess}
         userPreferences={userPreferences}
         setUserPreferences={setUserPreferences}
         setResetIsOpen={setResetIsOpen}
+        setProgressIsOpen={setProgressIsOpen}
       />
       {resetIsOpen && (
         <Dialog>
@@ -73,6 +76,11 @@ export const Game = () => {
             cancelAction={setResetIsOpen}
             confirmAction={resetGame}
           />
+        </Dialog>
+      )}
+      {progressIsOpen && (
+        <Dialog>
+          <ProgressDialog progress={progress} gameData={gameArray} setProgressIsOpen={setProgressIsOpen} />
         </Dialog>
       )}
       {hasWon && (

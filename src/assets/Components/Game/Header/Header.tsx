@@ -1,34 +1,40 @@
 import { Link } from "react-router-dom";
-import Classes from "./Header.module.scss"
+import Classes from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightFromBracket, faArrowRotateLeft, faBars, faEllipsis, faHamburger, faLightbulb, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRightFromBracket,
+  faArrowRotateLeft,
+  faBars,
+  faEllipsis,
+  faHamburger,
+  faLightbulb,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Dialog } from "../../../../SharedComponents/Dialog/Dialog";
 import { useMobileView } from "../../../../logic/Hooks/useMobileView";
 export const TopBar = ({ ...props }) => {
+  const isMobile = useMobileView();
 
-  const isMobile = useMobileView()
-  
   return (
-  <>
-    {isMobile ? <MobileToolbar {...props} /> : <DesktopToolbar {...props} />}
-  </>
-
-  )
-}
+    <>
+      {isMobile ? <MobileToolbar {...props} /> : <DesktopToolbar {...props} />}
+    </>
+  );
+};
 
 const MobileToolbar = ({
   onSubmit,
   setGuess,
   stationData,
-  foundCountries,
+  progress,
   guess,
   userPreferences,
   setUserPreferences,
   setResetIsOpen,
+  setProgressIsOpen,
 }) => {
-
-  const [mobileMenuOpen, setMobileMenOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenOpen] = useState(false);
   return (
     <div className={Classes.TopBarContainer}>
       <div className={Classes.ButtonsContainer}>
@@ -64,7 +70,7 @@ const MobileToolbar = ({
             </button>
             <button
               className={Classes.MenuMobileButton}
-              disabled={foundCountries === 0}
+              disabled={progress === 0}
               onClick={() => setResetIsOpen(true)}
             >
               <FontAwesomeIcon icon={faArrowRotateLeft} />
@@ -92,7 +98,7 @@ const MobileToolbar = ({
       <div className={Classes.ProgressContainer}>
         <div className={Classes.ProgressCount}>
           <p>
-            {foundCountries}/{stationData.length}
+            {progress}/{stationData.length}
           </p>
         </div>
       </div>
@@ -100,20 +106,16 @@ const MobileToolbar = ({
   );
 };
 
-
-
-
-
-
 const DesktopToolbar = ({
   onSubmit,
   setGuess,
   stationData,
-  foundCountries,
+  progress,
   guess,
   userPreferences,
   setUserPreferences,
-  setResetIsOpen
+  setResetIsOpen,
+  setProgressIsOpen,
 }) => {
   return (
     <div className={Classes.TopBarContainer}>
@@ -136,13 +138,11 @@ const DesktopToolbar = ({
             )
           }
         >
-          <FontAwesomeIcon
-            icon={faLightbulb}
-          />
+          <FontAwesomeIcon icon={faLightbulb} />
         </button>
         <button
           className={Classes.TopBarButton}
-          disabled={foundCountries === 0}
+          disabled={progress === 0}
           onClick={() => setResetIsOpen(true)}
         >
           Reset
@@ -157,19 +157,22 @@ const DesktopToolbar = ({
           placeholder="Type a city name"
         ></input>
       </form>
-      <div className={Classes.ProgressContainer}>
+      <button
+        className={Classes.ProgressContainer}
+        onClick={() => setProgressIsOpen(true)}
+      >
         <div className={Classes.ProgressCount}>
           <p>Progress:</p>
           <p>
-            {foundCountries} / {stationData.length}
+            {progress} / {stationData.length}
           </p>
         </div>
         <progress
           style={{ accentColor: "green", width: "120px", height: "18px" }}
           max={stationData.length}
-          value={foundCountries}
+          value={progress}
         ></progress>
-      </div>
+      </button>
     </div>
   );
 };
