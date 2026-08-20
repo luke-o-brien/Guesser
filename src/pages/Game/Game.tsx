@@ -8,6 +8,32 @@ import { WinnerDialog } from "../../assets/Components/Game/WinnerDialog/WinnerDi
 import { ProgressDialog } from "../../assets/Components/Game/ProgressDialog/ProgressDialog";
 
 export const Game = () => {
+
+const generateProgress = () => {
+  if (gameData.at(0)?.category) {
+    console.log("multicategory");
+    const obj = {
+      total: gameData.length,
+      overallProgress: 0,
+    };
+    gameData.forEach((item) => {
+      if (obj[item.category.value]) {
+        obj[item.category.value].total = obj[item.category.value].total + 1;
+      } else {
+        obj[item.category.value] = {
+          name: item.category.value,
+          type: item.category.name,
+          total: 1,
+          progress: 0,
+        };
+      }
+    });
+    console.log(obj);
+    return obj
+  } 
+
+  return 0;
+};
   const userPreferenceData = localStorage.getItem("userPreferances");
   // const localStorageData = localStorage.getItem('gameData')
 
@@ -15,7 +41,7 @@ export const Game = () => {
   const [resetIsOpen, setResetIsOpen] = useState(false);
   const [progressIsOpen, setProgressIsOpen] = useState(false);
   // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(generateProgress());
   const [guess, setGuess] = useState("");
   const [hasWon, setHasWon] = useState(false);
   const [userPreferences, setUserPreferences] = useState(
@@ -25,6 +51,8 @@ export const Game = () => {
         ? { theme: "dark" }
         : { theme: "light" },
   );
+
+  console.log('progress:', progress)
 
   const onSubmit = (e) => {
     e.preventDefault();

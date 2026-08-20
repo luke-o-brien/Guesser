@@ -738,7 +738,7 @@
     "name": "Baku",
     "displayName": "Baku",
     "country": "Azerbaijan",
-    "continent": "Europe",
+    "continent": "Asia",
     "location": {
       "lat": 40.4093,
       "lon": 49.8671
@@ -746,7 +746,7 @@
     "found": false,
     "category": {
       "name": "Continent",
-      "value": "Europe"
+      "value": "Asia"
     }
   }
 ]
