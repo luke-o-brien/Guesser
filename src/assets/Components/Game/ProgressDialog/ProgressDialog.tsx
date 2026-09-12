@@ -34,7 +34,7 @@ const convertProgress = () => {
         ></progress>
       </div>
       <div>
-        {DetailedProgress.categories.map((category, idx) => (
+        {DetailedProgress.categories.length > 1 && DetailedProgress.categories.map((category, idx) => (
           <div>
         <div className={Classes.ProgressCount}>
           <p>{category.name}</p>

@@ -6,15 +6,37 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 96px;
+  gap: 8px;
   padding: 20px 0px;
 }
 
+.WizardHeader {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.StartName {
+  font-size: 40px;
+}
+
+.WizardContainer {
+  width: 50vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
 
 .TitleContainer {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 64px;
 }
 .ButtonLink {
   text-decoration: none;
@@ -29,6 +51,7 @@
   border-radius: 16px;
   padding: 32px;
   text-decoration: none;
+  flex: 1;
 }
 
 .NewGameButton:hover {

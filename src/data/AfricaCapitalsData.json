@@ -1,0 +1,488 @@
+[
+  {
+    "name": "Algiers",
+    "displayName": "Algiers",
+    "country": "Algeria",
+    "continent": "Africa",
+    "location": { "lat": 36.7538, "lon": 3.0588 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Luanda",
+    "displayName": "Luanda",
+    "country": "Angola",
+    "continent": "Africa",
+    "location": { "lat": -8.8390, "lon": 13.2894 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Porto-Novo",
+    "displayName": "Porto-Novo",
+    "country": "Benin",
+    "continent": "Africa",
+    "location": { "lat": 6.4969, "lon": 2.6289 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Gaborone",
+    "displayName": "Gaborone",
+    "country": "Botswana",
+    "continent": "Africa",
+    "location": { "lat": -24.6282, "lon": 25.9231 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Ouagadougou",
+    "displayName": "Ouagadougou",
+    "country": "Burkina Faso",
+    "continent": "Africa",
+    "location": { "lat": 12.3714, "lon": -1.5197 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Gitega",
+    "displayName": "Gitega",
+    "country": "Burundi",
+    "continent": "Africa",
+    "location": { "lat": -3.4264, "lon": 29.9306 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Praia",
+    "displayName": "Praia",
+    "country": "Cabo Verde",
+    "continent": "Africa",
+    "location": { "lat": 14.9330, "lon": -23.5133 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Yaounde",
+    "displayName": "Yaoundé",
+    "country": "Cameroon",
+    "continent": "Africa",
+    "location": { "lat": 3.8480, "lon": 11.5021 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Bangui",
+    "displayName": "Bangui",
+    "country": "Central African Republic",
+    "continent": "Africa",
+    "location": { "lat": 4.3947, "lon": 18.5582 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "NDjamena",
+    "displayName": "N'Djamena",
+    "country": "Chad",
+    "continent": "Africa",
+    "location": { "lat": 12.1348, "lon": 15.0557 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Moroni",
+    "displayName": "Moroni",
+    "country": "Comoros",
+    "continent": "Africa",
+    "location": { "lat": -11.7022, "lon": 43.2551 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Brazzaville",
+    "displayName": "Brazzaville",
+    "country": "Republic of the Congo",
+    "continent": "Africa",
+    "location": { "lat": -4.2634, "lon": 15.2429 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Kinshasa",
+    "displayName": "Kinshasa",
+    "country": "Democratic Republic of the Congo",
+    "continent": "Africa",
+    "location": { "lat": -4.4419, "lon": 15.2663 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Yamoussoukro",
+    "displayName": "Yamoussoukro",
+    "country": "Côte d'Ivoire",
+    "continent": "Africa",
+    "location": { "lat": 6.8276, "lon": -5.2893 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Djibouti",
+    "displayName": "Djibouti",
+    "country": "Djibouti",
+    "continent": "Africa",
+    "location": { "lat": 11.8251, "lon": 42.5903 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Cairo",
+    "displayName": "Cairo",
+    "country": "Egypt",
+    "continent": "Africa",
+    "location": { "lat": 30.0444, "lon": 31.2357 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Malabo",
+    "displayName": "Malabo",
+    "country": "Equatorial Guinea",
+    "continent": "Africa",
+    "location": { "lat": 3.7523, "lon": 8.7742 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Asmara",
+    "displayName": "Asmara",
+    "country": "Eritrea",
+    "continent": "Africa",
+    "location": { "lat": 15.3229, "lon": 38.9251 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Mbabane",
+    "displayName": "Mbabane",
+    "country": "Eswatini",
+    "continent": "Africa",
+    "location": { "lat": -26.3054, "lon": 31.1367 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "AddisAbaba",
+    "displayName": "Addis Ababa",
+    "country": "Ethiopia",
+    "continent": "Africa",
+    "location": { "lat": 9.0320, "lon": 38.7469 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Libreville",
+    "displayName": "Libreville",
+    "country": "Gabon",
+    "continent": "Africa",
+    "location": { "lat": 0.4162, "lon": 9.4673 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Banjul",
+    "displayName": "Banjul",
+    "country": "Gambia",
+    "continent": "Africa",
+    "location": { "lat": 13.4549, "lon": -16.5790 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Accra",
+    "displayName": "Accra",
+    "country": "Ghana",
+    "continent": "Africa",
+    "location": { "lat": 5.6037, "lon": -0.1870 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Conakry",
+    "displayName": "Conakry",
+    "country": "Guinea",
+    "continent": "Africa",
+    "location": { "lat": 9.6412, "lon": -13.5784 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Bissau",
+    "displayName": "Bissau",
+    "country": "Guinea-Bissau",
+    "continent": "Africa",
+    "location": { "lat": 11.8636, "lon": -15.5977 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Nairobi",
+    "displayName": "Nairobi",
+    "country": "Kenya",
+    "continent": "Africa",
+    "location": { "lat": -1.2864, "lon": 36.8172 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Maseru",
+    "displayName": "Maseru",
+    "country": "Lesotho",
+    "continent": "Africa",
+    "location": { "lat": -29.3151, "lon": 27.4869 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Monrovia",
+    "displayName": "Monrovia",
+    "country": "Liberia",
+    "continent": "Africa",
+    "location": { "lat": 6.2907, "lon": -10.7605 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Tripoli",
+    "displayName": "Tripoli",
+    "country": "Libya",
+    "continent": "Africa",
+    "location": { "lat": 32.8872, "lon": 13.1913 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Antananarivo",
+    "displayName": "Antananarivo",
+    "country": "Madagascar",
+    "continent": "Africa",
+    "location": { "lat": -18.8792, "lon": 47.5079 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Lilongwe",
+    "displayName": "Lilongwe",
+    "country": "Malawi",
+    "continent": "Africa",
+    "location": { "lat": -13.9626, "lon": 33.7741 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Bamako",
+    "displayName": "Bamako",
+    "country": "Mali",
+    "continent": "Africa",
+    "location": { "lat": 12.6392, "lon": -8.0029 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Nouakchott",
+    "displayName": "Nouakchott",
+    "country": "Mauritania",
+    "continent": "Africa",
+    "location": { "lat": 18.0735, "lon": -15.9582 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "PortLouis",
+    "displayName": "Port Louis",
+    "country": "Mauritius",
+    "continent": "Africa",
+    "location": { "lat": -20.1609, "lon": 57.5012 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Rabat",
+    "displayName": "Rabat",
+    "country": "Morocco",
+    "continent": "Africa",
+    "location": { "lat": 34.0209, "lon": -6.8416 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Maputo",
+    "displayName": "Maputo",
+    "country": "Mozambique",
+    "continent": "Africa",
+    "location": { "lat": -25.9692, "lon": 32.5732 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Windhoek",
+    "displayName": "Windhoek",
+    "country": "Namibia",
+    "continent": "Africa",
+    "location": { "lat": -22.5609, "lon": 17.0658 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Niamey",
+    "displayName": "Niamey",
+    "country": "Niger",
+    "continent": "Africa",
+    "location": { "lat": 13.5127, "lon": 2.1128 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Abuja",
+    "displayName": "Abuja",
+    "country": "Nigeria",
+    "continent": "Africa",
+    "location": { "lat": 9.0765, "lon": 7.3986 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Kigali",
+    "displayName": "Kigali",
+    "country": "Rwanda",
+    "continent": "Africa",
+    "location": { "lat": -1.9403, "lon": 30.0644 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "SaoTome",
+    "displayName": "São Tomé",
+    "country": "Sao Tome and Principe",
+    "continent": "Africa",
+    "location": { "lat": 0.3302, "lon": 6.7333 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Dakar",
+    "displayName": "Dakar",
+    "country": "Senegal",
+    "continent": "Africa",
+    "location": { "lat": 14.7167, "lon": -17.4677 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Victoria",
+    "displayName": "Victoria",
+    "country": "Seychelles",
+    "continent": "Africa",
+    "location": { "lat": -4.6191, "lon": 55.4513 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Freetown",
+    "displayName": "Freetown",
+    "country": "Sierra Leone",
+    "continent": "Africa",
+    "location": { "lat": 8.4657, "lon": -13.2317 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Mogadishu",
+    "displayName": "Mogadishu",
+    "country": "Somalia",
+    "continent": "Africa",
+    "location": { "lat": 2.0469, "lon": 45.3182 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Pretoria",
+    "displayName": "Pretoria",
+    "country": "South Africa",
+    "continent": "Africa",
+    "location": { "lat": -25.7479, "lon": 28.2293 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Juba",
+    "displayName": "Juba",
+    "country": "South Sudan",
+    "continent": "Africa",
+    "location": { "lat": 4.8594, "lon": 31.5713 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Khartoum",
+    "displayName": "Khartoum",
+    "country": "Sudan",
+    "continent": "Africa",
+    "location": { "lat": 15.5007, "lon": 32.5599 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Dodoma",
+    "displayName": "Dodoma",
+    "country": "Tanzania",
+    "continent": "Africa",
+    "location": { "lat": -6.1630, "lon": 35.7516 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Lome",
+    "displayName": "Lomé",
+    "country": "Togo",
+    "continent": "Africa",
+    "location": { "lat": 6.1256, "lon": 1.2254 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Tunis",
+    "displayName": "Tunis",
+    "country": "Tunisia",
+    "continent": "Africa",
+    "location": { "lat": 36.8065, "lon": 10.1815 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Kampala",
+    "displayName": "Kampala",
+    "country": "Uganda",
+    "continent": "Africa",
+    "location": { "lat": 0.3476, "lon": 32.5825 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Lusaka",
+    "displayName": "Lusaka",
+    "country": "Zambia",
+    "continent": "Africa",
+    "location": { "lat": -15.3875, "lon": 28.3228 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  },
+  {
+    "name": "Harare",
+    "displayName": "Harare",
+    "country": "Zimbabwe",
+    "continent": "Africa",
+    "location": { "lat": -17.8252, "lon": 31.0335 },
+    "found": false,
+    "category": { "name": "Continent", "value": "Africa" }
+  }
+]

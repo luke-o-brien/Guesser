@@ -1,21 +1,24 @@
 import { useState } from "react";
 import gameData from "../../data/GameData.json";
+import AfricaData from "../../data/AfricaCapitalsData.json"
 import { Dialog } from "../../SharedComponents/Dialog/Dialog";
 import { ConfirmationDialog } from "../../assets/Components/Game/ConfirmationDialog/ConfirmationDialog";
 import { TopBar } from "../../assets/Components/Game/Header/Header";
 import Map from "../../assets/Components/Game/Map/Map";
 import { WinnerDialog } from "../../assets/Components/Game/WinnerDialog/WinnerDialog";
 import { ProgressDialog } from "../../assets/Components/Game/ProgressDialog/ProgressDialog";
+import { useSearchParams } from "react-router-dom";
+
 
 export const Game = () => {
 
 const generateProgress = () => {
-  if (gameData.at(0)?.category) {
+  if (gameArray.at(0)?.category) {
     const obj = {
-      total: gameData.length,
+      total: gameArray.length,
       overallProgress: 0,
     };
-    gameData.forEach((item) => {
+    gameArray.forEach((item) => {
       if (obj[item.category.value]) {
         obj[item.category.value].total = obj[item.category.value].total + 1;
       } else {
@@ -35,6 +38,8 @@ const generateProgress = () => {
   
   
   const updateProgress = (matchedStation) => {
+    console.log(matchedStation)
+    console.log(progress)
   setProgress((prev) => ({
     ...prev,
     overallProgress: prev.overallProgress + 1,
@@ -43,11 +48,25 @@ const generateProgress = () => {
       progress: prev[matchedStation.category.value].progress + 1,
     },
   }));
-};
+  };
+  
+  // const gameType = 'Africa'
+
+  const setGameData = () => {
+    if (region === 'Europe') {
+      return gameData
+    } else if (region === 'Africa') {
+      return AfricaData
+    }
+  }
   const userPreferenceData = localStorage.getItem("userPreferances");
   // const localStorageData = localStorage.getItem('gameData')
 
-  const [gameArray, setGameArray] = useState(gameData);
+  const [searchParams] = useSearchParams();
+  const quizType = searchParams.get("type");
+  const region = searchParams.get("region");
+
+  const [gameArray, setGameArray] = useState(setGameData());
   const [resetIsOpen, setResetIsOpen] = useState(false);
   const [progressIsOpen, setProgressIsOpen] = useState(false);
   // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
