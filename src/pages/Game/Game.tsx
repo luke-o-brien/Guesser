@@ -11,7 +11,6 @@ export const Game = () => {
 
 const generateProgress = () => {
   if (gameData.at(0)?.category) {
-    console.log("multicategory");
     const obj = {
       total: gameData.length,
       overallProgress: 0,
@@ -28,11 +27,22 @@ const generateProgress = () => {
         };
       }
     });
-    console.log(obj);
     return obj
   } 
 
   return 0;
+};
+  
+  
+  const updateProgress = (matchedStation) => {
+  setProgress((prev) => ({
+    ...prev,
+    overallProgress: prev.overallProgress + 1,
+    [matchedStation.category.value]: {
+      ...prev[matchedStation.category.value],
+      progress: prev[matchedStation.category.value].progress + 1,
+    },
+  }));
 };
   const userPreferenceData = localStorage.getItem("userPreferances");
   // const localStorageData = localStorage.getItem('gameData')
@@ -52,7 +62,6 @@ const generateProgress = () => {
         : { theme: "light" },
   );
 
-  console.log('progress:', progress)
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -63,16 +72,16 @@ const generateProgress = () => {
     );
 
     if (matchedStation && matchedStation.found !== true) {
-      setProgress(progress + 1);
       const updatedArray = gameArray.map((station) =>
         station === matchedStation ? { ...station, found: true } : station,
       );
-      if (progress + 1 === gameArray.length) {
+      if (progress.overallProgress + 1 === gameArray.length) {
         console.log("won");
         setHasWon(true);
       }
       setGameArray(updatedArray);
       setGuess("");
+      updateProgress(matchedStation);
       // localStorage.setItem("gameData", JSON.stringify(updatedArray));
     } else {
       console.log("not found");

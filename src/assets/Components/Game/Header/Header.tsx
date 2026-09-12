@@ -98,7 +98,7 @@ const MobileToolbar = ({
       <div className={Classes.ProgressContainer}>
         <div className={Classes.ProgressCount}>
           <p>
-            {progress}/{stationData.length}
+            {progress.overallProgress}/{stationData.length}
           </p>
         </div>
       </div>
@@ -164,13 +164,13 @@ const DesktopToolbar = ({
         <div className={Classes.ProgressCount}>
           <p>Progress:</p>
           <p>
-            {progress} / {stationData.length}
+            {progress.overallProgress} / {stationData.length}
           </p>
         </div>
         <progress
           style={{ accentColor: "green", width: "120px", height: "18px" }}
           max={stationData.length}
-          value={progress}
+          value={progress.overallProgress}
         ></progress>
       </button>
     </div>
