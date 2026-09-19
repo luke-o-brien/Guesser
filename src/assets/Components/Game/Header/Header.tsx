@@ -164,12 +164,12 @@ const DesktopToolbar = ({
         <div className={Classes.ProgressCount}>
           <p>Progress:</p>
           <p>
-            {progress.overallProgress} / {stationData.length}
+            {progress.overallProgress} / {stationData.mapData.length}
           </p>
         </div>
         <progress
           style={{ accentColor: "green", width: "120px", height: "18px" }}
-          max={stationData.length}
+          max={stationData.mapData.length}
           value={progress.overallProgress}
         ></progress>
       </button>

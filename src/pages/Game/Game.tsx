@@ -13,12 +13,12 @@ import { useSearchParams } from "react-router-dom";
 export const Game = () => {
 
 const generateProgress = () => {
-  if (gameArray.at(0)?.category) {
+  if (game.mapData.at(0)?.category) {
     const obj = {
-      total: gameArray.length,
+      total: game.mapData.length,
       overallProgress: 0,
     };
-    gameArray.forEach((item) => {
+    game.mapData.forEach((item) => {
       if (obj[item.category.value]) {
         obj[item.category.value].total = obj[item.category.value].total + 1;
       } else {
@@ -30,7 +30,7 @@ const generateProgress = () => {
         };
       }
     });
-    return obj
+    return obj;
   } 
 
   return 0;
@@ -66,7 +66,7 @@ const generateProgress = () => {
   const quizType = searchParams.get("type");
   const region = searchParams.get("region");
 
-  const [gameArray, setGameArray] = useState(setGameData());
+  const [game, setGame] = useState(setGameData());
   const [resetIsOpen, setResetIsOpen] = useState(false);
   const [progressIsOpen, setProgressIsOpen] = useState(false);
   // const [gameArray, setGameArray] = useState(localStorageData ? JSON.parse(localStorageData) : stationData);
@@ -84,21 +84,21 @@ const generateProgress = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const matchedStation = gameArray.find(
+    const matchedStation = game.mapData.find(
       (station) =>
         station.name.toLowerCase() === guess.toLowerCase() ||
         station.displayName.toLowerCase() === guess.toLowerCase(),
     );
 
     if (matchedStation && matchedStation.found !== true) {
-      const updatedArray = gameArray.map((station) =>
+      const updatedArray = game.mapData.map((station) =>
         station === matchedStation ? { ...station, found: true } : station,
       );
-      if (progress.overallProgress + 1 === gameArray.length) {
+      if (progress.overallProgress + 1 === game.mapData.length) {
         console.log("won");
         setHasWon(true);
       }
-      setGameArray(updatedArray);
+      setGame((prev) => ({ ...prev, mapData: updatedArray }));
       setGuess("");
       updateProgress(matchedStation);
       // localStorage.setItem("gameData", JSON.stringify(updatedArray));
@@ -108,8 +108,8 @@ const generateProgress = () => {
   };
 
   const resetGame = () => {
-    setGameArray(gameData);
-    setProgress(0);
+    setGame(setGameData());
+    setProgress(generateProgress());
   };
 
   return (
@@ -144,7 +144,7 @@ const generateProgress = () => {
           <WinnerDialog reset={resetGame} setHasWon={setHasWon} />
         </Dialog>
       )}
-      <Map stationData={gameArray} userPreferences={userPreferences} />
+      <Map stationData={game?.mapData} region={region} userPreferences={userPreferences} />
     </div>
   );
 };

@@ -1,4 +1,11 @@
-[
+{ "gameSettings": {
+  "region" : "Africa",
+  "gameType": "Capitals",
+  "mapCentrePoint": [2.37, 16.061],
+  "zoom": 2,
+  "minZoom": 2
+}, 
+"mapData": [
   {
     "name": "Algiers",
     "displayName": "Algiers",
@@ -486,3 +493,4 @@
     "category": { "name": "Continent", "value": "Africa" }
   }
 ]
+}

@@ -37,7 +37,7 @@ async function fetchStrippedStyle(theme) {
   return style;
 }
 
-function Map({ stationData, userPreferences }) {
+function Map({ stationData, userPreferences, region }) {
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
   const isStyleReady = useRef(false);
@@ -144,9 +144,14 @@ function Map({ stationData, userPreferences }) {
         accessToken: `${import.meta.env.VITE_MAPBOX_API_KEY}`,
         container: mapContainerRef.current,
         style,
-        center: [-0.1281, 51.508],
-        zoom: 3,
-        minZoom: 3,
+        center:
+          region === "Europe"
+            ? [-0.1281, 51.508]
+            : region === "Africa"
+              ? [2.37, 16.061]
+              : [-0.1281, 51.508],
+        zoom:  region === 'Europe' ? 3 : region === 'Africa' ? 2 : 3,
+        minZoom: region === 'Europe' ? 3 : region === 'Africa' ? 2 : 3,
         maxZoom: 13,
       });
 

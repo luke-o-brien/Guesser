@@ -1,4 +1,11 @@
-[
+{ "gameSettings": {
+  "region" : "Europe",
+  "gameType": "Capitals",
+  "mapCentrePoint": [-0.1281, 51.508],
+  "zoom": 3,
+  "minZoom": 3
+},
+  "mapData": [
   {
     "name": "London",
     "displayName": "London",
@@ -749,4 +756,4 @@
       "value": "Asia"
     }
   }
-]
+]}
