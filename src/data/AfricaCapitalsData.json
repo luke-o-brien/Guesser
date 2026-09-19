@@ -1,9 +1,10 @@
 { "gameSettings": {
   "region" : "Africa",
   "gameType": "Capitals",
-  "mapCentrePoint": [2.37, 16.061],
-  "zoom": 2,
-  "minZoom": 2
+  "center": [2.37, 16.061],
+  "zoom": 2.5,
+  "minZoom": 2,
+  "maxBounds": null
 }, 
 "mapData": [
   {

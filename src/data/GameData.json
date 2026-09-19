@@ -1,9 +1,10 @@
 { "gameSettings": {
   "region" : "Europe",
   "gameType": "Capitals",
-  "mapCentrePoint": [-0.1281, 51.508],
+  "center": [-0.1281, 51.508],
   "zoom": 3,
-  "minZoom": 3
+  "minZoom": 3,
+  "maxBounds": [[-57.5, 28],[53.25, 73.25]]
 },
   "mapData": [
   {

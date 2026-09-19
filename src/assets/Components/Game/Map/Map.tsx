@@ -2,10 +2,10 @@ import { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-function convertData(stationData) {
+function convertData(mapData) {
   return {
     type: "FeatureCollection",
-    features: stationData.map((country, idx) => ({
+    features: mapData.map((country, idx) => ({
       type: "Feature",
       id: idx,
       properties: {
@@ -37,17 +37,19 @@ async function fetchStrippedStyle(theme) {
   return style;
 }
 
-function Map({ stationData, userPreferences, region }) {
+function Map({ game, userPreferences, region }) {
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
   const isStyleReady = useRef(false);
-  const stationDataRef = useRef(stationData);
+  const stationDataRef = useRef(game.mapData);
   const appliedThemeRef = useRef(null);
   const [mapReady, setMapReady] = useState(false);
 
+  console.log(game);
+
   useEffect(() => {
-    stationDataRef.current = stationData;
-  }, [stationData]);
+    stationDataRef.current = game.mapData;
+  }, [game.mapData]);
 
   function addSourceAndLayers() {
     const map = mapRef.current;
@@ -144,15 +146,11 @@ function Map({ stationData, userPreferences, region }) {
         accessToken: `${import.meta.env.VITE_MAPBOX_API_KEY}`,
         container: mapContainerRef.current,
         style,
-        center:
-          region === "Europe"
-            ? [-0.1281, 51.508]
-            : region === "Africa"
-              ? [2.37, 16.061]
-              : [-0.1281, 51.508],
-        zoom:  region === 'Europe' ? 3 : region === 'Africa' ? 2 : 3,
-        minZoom: region === 'Europe' ? 3 : region === 'Africa' ? 2 : 3,
+        center: game.gameSettings.center,
+        zoom: game.gameSettings.zoom,
+        minZoom: game.gameSettings.minZoom,
         maxZoom: 13,
+        maxBounds: game.gameSettings.maxBounds ? game.gameSettings.maxBounds : null,
       });
 
       mapRef.current = map;
@@ -212,8 +210,8 @@ function Map({ stationData, userPreferences, region }) {
   }, [userPreferences?.theme, mapReady]);
 
   useEffect(() => {
-    syncFoundState(stationData);
-  }, [stationData]);
+    syncFoundState(game.mapData);
+  }, [game.mapData]);
 
   return (
     <div

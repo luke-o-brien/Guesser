@@ -1,6 +1,8 @@
 import { useState } from "react";
 import gameData from "../../data/GameData.json";
 import AfricaData from "../../data/AfricaCapitalsData.json"
+import AsiaData from "../../data/AsiaCapitalsData.json"
+import SouthAmericaData from "../../data/SouthAmericaCapitalsData.json"
 import { Dialog } from "../../SharedComponents/Dialog/Dialog";
 import { ConfirmationDialog } from "../../assets/Components/Game/ConfirmationDialog/ConfirmationDialog";
 import { TopBar } from "../../assets/Components/Game/Header/Header";
@@ -57,8 +59,13 @@ const generateProgress = () => {
       return gameData
     } else if (region === 'Africa') {
       return AfricaData
-    }
+    } else if (region === 'Asia') {
+      return AsiaData
+    } else if (region === 'SouthAmerica') {
+      return SouthAmericaData
+      }
   }
+  
   const userPreferenceData = localStorage.getItem("userPreferances");
   // const localStorageData = localStorage.getItem('gameData')
 
@@ -117,7 +124,7 @@ const generateProgress = () => {
       <TopBar
         onSubmit={onSubmit}
         setGuess={setGuess}
-        stationData={gameData}
+        gameData={game}
         progress={progress}
         guess={guess}
         userPreferences={userPreferences}
@@ -144,7 +151,7 @@ const generateProgress = () => {
           <WinnerDialog reset={resetGame} setHasWon={setHasWon} />
         </Dialog>
       )}
-      <Map stationData={game?.mapData} region={region} userPreferences={userPreferences} />
+      <Map game={game} region={region} userPreferences={userPreferences} />
     </div>
   );
 };

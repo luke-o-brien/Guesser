@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Classes from './Home.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faEarthAmericas, faEarthAsia, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faCity } from "@fortawesome/free-solid-svg-icons";
 import { faEarthEurope } from "@fortawesome/free-solid-svg-icons";
 import { faEarthAfrica } from "@fortawesome/free-solid-svg-icons";
@@ -62,9 +62,7 @@ export const Home = () => {
                 </p>
               </button>
             </Link>
-            <Link
-              to={`/game?type=${startWizard.gameType}&region=${"Africa"}`}
-            >
+            <Link to={`/game?type=${startWizard.gameType}&region=${"Africa"}`}>
               <button className={Classes.NewGameButton}>
                 <FontAwesomeIcon icon={faEarthAfrica} size="xl" />
                 <p className={Classes.NewGameButtonHeader}>
@@ -72,6 +70,24 @@ export const Home = () => {
                 </p>
                 <p className={Classes.NewGameButtonSubHeader}>
                   Name all capitals of Africa
+                </p>
+              </button>
+            </Link>
+            <Link to={`/game?type=${startWizard.gameType}&region=${"Asia"}`}>
+              <button className={Classes.NewGameButton}>
+                <FontAwesomeIcon icon={faEarthAsia} size="xl" />
+                <p className={Classes.NewGameButtonHeader}>Capitals of Asia</p>
+                <p className={Classes.NewGameButtonSubHeader}>
+                  Name all capitals of Asia
+                </p>
+              </button>
+            </Link>
+            <Link to={`/game?type=${startWizard.gameType}&region=${"SouthAmerica"}`}>
+              <button className={Classes.NewGameButton}>
+                <FontAwesomeIcon icon={faEarthAmericas} size="xl" />
+                <p className={Classes.NewGameButtonHeader}>Capitals of South America</p>
+                <p className={Classes.NewGameButtonSubHeader}>
+                  Name all capitals of South America 
                 </p>
               </button>
             </Link>

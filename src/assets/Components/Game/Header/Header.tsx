@@ -26,7 +26,7 @@ export const TopBar = ({ ...props }) => {
 const MobileToolbar = ({
   onSubmit,
   setGuess,
-  stationData,
+  gameData,
   progress,
   guess,
   userPreferences,
@@ -98,7 +98,7 @@ const MobileToolbar = ({
       <div className={Classes.ProgressContainer}>
         <div className={Classes.ProgressCount}>
           <p>
-            {progress.overallProgress}/{stationData.length}
+            {progress.overallProgress}/{gameData.length}
           </p>
         </div>
       </div>
@@ -109,7 +109,7 @@ const MobileToolbar = ({
 const DesktopToolbar = ({
   onSubmit,
   setGuess,
-  stationData,
+  gameData,
   progress,
   guess,
   userPreferences,
@@ -117,6 +117,7 @@ const DesktopToolbar = ({
   setResetIsOpen,
   setProgressIsOpen,
 }) => {
+  console.log(gameData.mapData.length)
   return (
     <div className={Classes.TopBarContainer}>
       <div className={Classes.ButtonsContainer}>
@@ -164,12 +165,12 @@ const DesktopToolbar = ({
         <div className={Classes.ProgressCount}>
           <p>Progress:</p>
           <p>
-            {progress.overallProgress} / {stationData.mapData.length}
+            {progress.overallProgress} / {gameData.mapData.length}
           </p>
         </div>
         <progress
           style={{ accentColor: "green", width: "120px", height: "18px" }}
-          max={stationData.mapData.length}
+          max={gameData.mapData.length}
           value={progress.overallProgress}
         ></progress>
       </button>
