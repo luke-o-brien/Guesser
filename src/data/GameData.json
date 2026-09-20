@@ -10,751 +10,551 @@
   {
     "name": "London",
     "displayName": "London",
+    "answers": ["london"],
+    "localNames": ["London"],
     "country": "United Kingdom",
     "continent": "Europe",
-    "location": {
-      "lat": 51.508,
-      "lon": -0.1281
-    },
+    "location": { "lat": 51.508, "lon": -0.1281 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Dublin",
     "displayName": "Dublin",
+    "answers": ["dublin", "baile atha cliath", "dubh linn"],
+    "localNames": ["Dublin", "Baile Átha Cliath"],
     "country": "Ireland",
     "continent": "Europe",
-    "location": {
-      "lat": 53.3498,
-      "lon": -6.2603
-    },
+    "location": { "lat": 53.3498, "lon": -6.2603 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Brussels",
     "displayName": "Brussels",
+    "answers": ["brussels", "bruxelles", "brussel"],
+    "localNames": ["Bruxelles", "Brussel"],
     "country": "Belgium",
     "continent": "Europe",
-    "location": {
-      "lat": 50.8467,
-      "lon": 4.3525
-    },
+    "location": { "lat": 50.8467, "lon": 4.3525 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Amsterdam",
     "displayName": "Amsterdam",
+    "answers": ["amsterdam"],
+    "localNames": ["Amsterdam"],
     "country": "Netherlands",
     "continent": "Europe",
-    "location": {
-      "lat": 52.372,
-      "lon": 4.898
-    },
+    "location": { "lat": 52.372, "lon": 4.898 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Paris",
     "displayName": "Paris",
+    "answers": ["paris"],
+    "localNames": ["Paris"],
     "country": "France",
     "continent": "Europe",
-    "location": {
-      "lat": 48.8584,
-      "lon": 2.2945
-    },
+    "location": { "lat": 48.8584, "lon": 2.2945 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Tirana",
     "displayName": "Tirana",
+    "answers": ["tirana", "tirane"],
+    "localNames": ["Tiranë"],
     "country": "Albania",
     "continent": "Europe",
-    "location": {
-      "lat": 41.3275,
-      "lon": 19.8187
-    },
+    "location": { "lat": 41.3275, "lon": 19.8187 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
-    "name": "Andorra la Vella",
+    "name": "AndorraLaVella",
     "displayName": "Andorra la Vella",
+    "answers": ["andorra la vella", "andorra"],
+    "localNames": ["Andorra la Vella"],
     "country": "Andorra",
     "continent": "Europe",
-    "location": {
-      "lat": 42.5063,
-      "lon": 1.5218
-    },
+    "location": { "lat": 42.5063, "lon": 1.5218 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Vienna",
     "displayName": "Vienna",
+    "answers": ["vienna", "wien"],
+    "localNames": ["Wien"],
     "country": "Austria",
     "continent": "Europe",
-    "location": {
-      "lat": 48.2082,
-      "lon": 16.3738
-    },
+    "location": { "lat": 48.2082, "lon": 16.3738 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Minsk",
     "displayName": "Minsk",
+    "answers": ["minsk"],
+    "localNames": ["Мінск", "Минск"],
     "country": "Belarus",
     "continent": "Europe",
-    "location": {
-      "lat": 53.9006,
-      "lon": 27.559
-    },
+    "location": { "lat": 53.9006, "lon": 27.559 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Sarajevo",
     "displayName": "Sarajevo",
+    "answers": ["sarajevo"],
+    "localNames": ["Sarajevo", "Сарајево"],
     "country": "Bosnia and Herzegovina",
     "continent": "Europe",
-    "location": {
-      "lat": 43.8563,
-      "lon": 18.4131
-    },
+    "location": { "lat": 43.8563, "lon": 18.4131 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Sofia",
     "displayName": "Sofia",
+    "answers": ["sofia", "sofiya"],
+    "localNames": ["София"],
     "country": "Bulgaria",
     "continent": "Europe",
-    "location": {
-      "lat": 42.6977,
-      "lon": 23.3219
-    },
+    "location": { "lat": 42.6977, "lon": 23.3219 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Zagreb",
     "displayName": "Zagreb",
+    "answers": ["zagreb"],
+    "localNames": ["Zagreb"],
     "country": "Croatia",
     "continent": "Europe",
-    "location": {
-      "lat": 45.815,
-      "lon": 15.9819
-    },
+    "location": { "lat": 45.815, "lon": 15.9819 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Nicosia",
     "displayName": "Nicosia",
+    "answers": ["nicosia", "lefkosia", "lefkosa", "lefkoşa"],
+    "localNames": ["Λευκωσία", "Lefkoşa"],
     "country": "Cyprus",
     "continent": "Europe",
-    "location": {
-      "lat": 35.1856,
-      "lon": 33.3823
-    },
+    "location": { "lat": 35.1856, "lon": 33.3823 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Prague",
     "displayName": "Prague",
+    "answers": ["prague", "praha"],
+    "localNames": ["Praha"],
     "country": "Czech Republic",
     "continent": "Europe",
-    "location": {
-      "lat": 50.0755,
-      "lon": 14.4378
-    },
+    "location": { "lat": 50.0755, "lon": 14.4378 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Copenhagen",
     "displayName": "Copenhagen",
+    "answers": ["copenhagen", "kobenhavn", "københavn"],
+    "localNames": ["København"],
     "country": "Denmark",
     "continent": "Europe",
-    "location": {
-      "lat": 55.6761,
-      "lon": 12.5683
-    },
+    "location": { "lat": 55.6761, "lon": 12.5683 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Tallinn",
     "displayName": "Tallinn",
+    "answers": ["tallinn"],
+    "localNames": ["Tallinn"],
     "country": "Estonia",
     "continent": "Europe",
-    "location": {
-      "lat": 59.437,
-      "lon": 24.7536
-    },
+    "location": { "lat": 59.437, "lon": 24.7536 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Helsinki",
     "displayName": "Helsinki",
+    "answers": ["helsinki", "helsingfors"],
+    "localNames": ["Helsinki", "Helsingfors"],
     "country": "Finland",
     "continent": "Europe",
-    "location": {
-      "lat": 60.1699,
-      "lon": 24.9384
-    },
+    "location": { "lat": 60.1699, "lon": 24.9384 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Berlin",
     "displayName": "Berlin",
+    "answers": ["berlin"],
+    "localNames": ["Berlin"],
     "country": "Germany",
     "continent": "Europe",
-    "location": {
-      "lat": 52.52,
-      "lon": 13.405
-    },
+    "location": { "lat": 52.52, "lon": 13.405 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Athens",
     "displayName": "Athens",
+    "answers": ["athens", "athina", "athena"],
+    "localNames": ["Αθήνα"],
     "country": "Greece",
     "continent": "Europe",
-    "location": {
-      "lat": 37.9838,
-      "lon": 23.7275
-    },
+    "location": { "lat": 37.9838, "lon": 23.7275 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Budapest",
     "displayName": "Budapest",
+    "answers": ["budapest"],
+    "localNames": ["Budapest"],
     "country": "Hungary",
     "continent": "Europe",
-    "location": {
-      "lat": 47.4979,
-      "lon": 19.0402
-    },
+    "location": { "lat": 47.4979, "lon": 19.0402 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Reykjavik",
     "displayName": "Reykjavik",
+    "answers": ["reykjavik", "reykjavík"],
+    "localNames": ["Reykjavík"],
     "country": "Iceland",
     "continent": "Europe",
-    "location": {
-      "lat": 64.1466,
-      "lon": -21.9426
-    },
+    "location": { "lat": 64.1466, "lon": -21.9426 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Rome",
     "displayName": "Rome",
+    "answers": ["rome", "roma"],
+    "localNames": ["Roma"],
     "country": "Italy",
     "continent": "Europe",
-    "location": {
-      "lat": 41.9028,
-      "lon": 12.4964
-    },
+    "location": { "lat": 41.9028, "lon": 12.4964 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Pristina",
     "displayName": "Pristina",
+    "answers": ["pristina", "prishtina", "priština"],
+    "localNames": ["Prishtinë", "Приштина"],
     "country": "Kosovo",
     "continent": "Europe",
-    "location": {
-      "lat": 42.6629,
-      "lon": 21.1655
-    },
+    "location": { "lat": 42.6629, "lon": 21.1655 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Riga",
     "displayName": "Riga",
+    "answers": ["riga"],
+    "localNames": ["Rīga"],
     "country": "Latvia",
     "continent": "Europe",
-    "location": {
-      "lat": 56.9496,
-      "lon": 24.1052
-    },
+    "location": { "lat": 56.9496, "lon": 24.1052 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Vaduz",
     "displayName": "Vaduz",
+    "answers": ["vaduz"],
+    "localNames": ["Vaduz"],
     "country": "Liechtenstein",
     "continent": "Europe",
-    "location": {
-      "lat": 47.141,
-      "lon": 9.5209
-    },
+    "location": { "lat": 47.141, "lon": 9.5209 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Vilnius",
     "displayName": "Vilnius",
+    "answers": ["vilnius"],
+    "localNames": ["Vilnius"],
     "country": "Lithuania",
     "continent": "Europe",
-    "location": {
-      "lat": 54.6872,
-      "lon": 25.2797
-    },
+    "location": { "lat": 54.6872, "lon": 25.2797 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Luxembourg",
     "displayName": "Luxembourg",
+    "answers": ["luxembourg", "luxemburg", "letzebuerg"],
+    "localNames": ["Luxembourg", "Luxemburg", "Lëtzebuerg"],
     "country": "Luxembourg",
     "continent": "Europe",
-    "location": {
-      "lat": 49.6116,
-      "lon": 6.1319
-    },
+    "location": { "lat": 49.6116, "lon": 6.1319 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Valletta",
     "displayName": "Valletta",
+    "answers": ["valletta", "il-belt valletta"],
+    "localNames": ["Valletta", "Il-Belt Valletta"],
     "country": "Malta",
     "continent": "Europe",
-    "location": {
-      "lat": 35.8989,
-      "lon": 14.5146
-    },
+    "location": { "lat": 35.8989, "lon": 14.5146 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Chisinau",
     "displayName": "Chisinau",
+    "answers": ["chisinau", "chișinău"],
+    "localNames": ["Chișinău"],
     "country": "Moldova",
     "continent": "Europe",
-    "location": {
-      "lat": 47.0105,
-      "lon": 28.8638
-    },
+    "location": { "lat": 47.0105, "lon": 28.8638 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Monaco",
     "displayName": "Monaco",
+    "answers": ["monaco"],
+    "localNames": ["Monaco"],
     "country": "Monaco",
     "continent": "Europe",
-    "location": {
-      "lat": 43.7384,
-      "lon": 7.4246
-    },
+    "location": { "lat": 43.7384, "lon": 7.4246 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Podgorica",
     "displayName": "Podgorica",
+    "answers": ["podgorica"],
+    "localNames": ["Podgorica", "Подгорица"],
     "country": "Montenegro",
     "continent": "Europe",
-    "location": {
-      "lat": 42.4304,
-      "lon": 19.2594
-    },
+    "location": { "lat": 42.4304, "lon": 19.2594 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Skopje",
     "displayName": "Skopje",
+    "answers": ["skopje"],
+    "localNames": ["Скопје"],
     "country": "North Macedonia",
     "continent": "Europe",
-    "location": {
-      "lat": 42.0069,
-      "lon": 21.4277
-    },
+    "location": { "lat": 42.0069, "lon": 21.4277 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Oslo",
     "displayName": "Oslo",
+    "answers": ["oslo"],
+    "localNames": ["Oslo"],
     "country": "Norway",
     "continent": "Europe",
-    "location": {
-      "lat": 59.9139,
-      "lon": 10.7522
-    },
+    "location": { "lat": 59.9139, "lon": 10.7522 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Warsaw",
     "displayName": "Warsaw",
+    "answers": ["warsaw", "warszawa"],
+    "localNames": ["Warszawa"],
     "country": "Poland",
     "continent": "Europe",
-    "location": {
-      "lat": 52.2297,
-      "lon": 21.0122
-    },
+    "location": { "lat": 52.2297, "lon": 21.0122 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Lisbon",
     "displayName": "Lisbon",
+    "answers": ["lisbon", "lisboa"],
+    "localNames": ["Lisboa"],
     "country": "Portugal",
     "continent": "Europe",
-    "location": {
-      "lat": 38.7223,
-      "lon": -9.1393
-    },
+    "location": { "lat": 38.7223, "lon": -9.1393 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Bucharest",
     "displayName": "Bucharest",
+    "answers": ["bucharest", "bucuresti", "bucurești"],
+    "localNames": ["București"],
     "country": "Romania",
     "continent": "Europe",
-    "location": {
-      "lat": 44.4268,
-      "lon": 26.1025
-    },
+    "location": { "lat": 44.4268, "lon": 26.1025 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Moscow",
     "displayName": "Moscow",
+    "answers": ["moscow", "moskva"],
+    "localNames": ["Москва"],
     "country": "Russia",
     "continent": "Europe",
-    "location": {
-      "lat": 55.7558,
-      "lon": 37.6173
-    },
+    "location": { "lat": 55.7558, "lon": 37.6173 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
-    "name": "San Marino",
+    "name": "SanMarino",
     "displayName": "San Marino",
+    "answers": ["san marino"],
+    "localNames": ["San Marino"],
     "country": "San Marino",
     "continent": "Europe",
-    "location": {
-      "lat": 43.9424,
-      "lon": 12.4578
-    },
+    "location": { "lat": 43.9424, "lon": 12.4578 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Belgrade",
     "displayName": "Belgrade",
+    "answers": ["belgrade", "beograd"],
+    "localNames": ["Београд", "Beograd"],
     "country": "Serbia",
     "continent": "Europe",
-    "location": {
-      "lat": 44.7866,
-      "lon": 20.4489
-    },
+    "location": { "lat": 44.7866, "lon": 20.4489 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Bratislava",
     "displayName": "Bratislava",
+    "answers": ["bratislava"],
+    "localNames": ["Bratislava"],
     "country": "Slovakia",
     "continent": "Europe",
-    "location": {
-      "lat": 48.1486,
-      "lon": 17.1077
-    },
+    "location": { "lat": 48.1486, "lon": 17.1077 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Ljubljana",
     "displayName": "Ljubljana",
+    "answers": ["ljubljana"],
+    "localNames": ["Ljubljana"],
     "country": "Slovenia",
     "continent": "Europe",
-    "location": {
-      "lat": 46.0569,
-      "lon": 14.5058
-    },
+    "location": { "lat": 46.0569, "lon": 14.5058 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Madrid",
     "displayName": "Madrid",
+    "answers": ["madrid"],
+    "localNames": ["Madrid"],
     "country": "Spain",
     "continent": "Europe",
-    "location": {
-      "lat": 40.4168,
-      "lon": -3.7038
-    },
+    "location": { "lat": 40.4168, "lon": -3.7038 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Stockholm",
     "displayName": "Stockholm",
+    "answers": ["stockholm"],
+    "localNames": ["Stockholm"],
     "country": "Sweden",
     "continent": "Europe",
-    "location": {
-      "lat": 59.3293,
-      "lon": 18.0686
-    },
+    "location": { "lat": 59.3293, "lon": 18.0686 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Bern",
     "displayName": "Bern",
+    "answers": ["bern", "berne", "berna"],
+    "localNames": ["Bern", "Berne", "Berna"],
     "country": "Switzerland",
     "continent": "Europe",
-    "location": {
-      "lat": 46.948,
-      "lon": 7.4474
-    },
+    "location": { "lat": 46.948, "lon": 7.4474 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Kyiv",
     "displayName": "Kyiv",
+    "answers": ["kyiv", "kiev"],
+    "localNames": ["Київ"],
     "country": "Ukraine",
     "continent": "Europe",
-    "location": {
-      "lat": 50.4501,
-      "lon": 30.5234
-    },
+    "location": { "lat": 50.4501, "lon": 30.5234 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
-    "name": "Vatican City",
+    "name": "VaticanCity",
     "displayName": "Vatican City",
+    "answers": ["vatican city", "vatican"],
+    "localNames": ["Città del Vaticano"],
     "country": "Vatican City",
     "continent": "Europe",
-    "location": {
-      "lat": 41.9029,
-      "lon": 12.4534
-    },
+    "location": { "lat": 41.9029, "lon": 12.4534 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Ankara",
     "displayName": "Ankara",
+    "answers": ["ankara"],
+    "localNames": ["Ankara"],
     "country": "Turkey",
     "continent": "Europe",
-    "location": {
-      "lat": 39.9334,
-      "lon": 32.8597
-    },
+    "location": { "lat": 39.9334, "lon": 32.8597 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Tbilisi",
     "displayName": "Tbilisi",
+    "answers": ["tbilisi"],
+    "localNames": ["თბილისი"],
     "country": "Georgia",
     "continent": "Europe",
-    "location": {
-      "lat": 41.7151,
-      "lon": 44.8271
-    },
+    "location": { "lat": 41.7151, "lon": 44.8271 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Yerevan",
     "displayName": "Yerevan",
+    "answers": ["yerevan"],
+    "localNames": ["Երևան"],
     "country": "Armenia",
     "continent": "Europe",
-    "location": {
-      "lat": 40.1872,
-      "lon": 44.5152
-    },
+    "location": { "lat": 40.1872, "lon": 44.5152 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Europe"
-    }
+    "category": { "name": "Continent", "value": "Europe" }
   },
   {
     "name": "Baku",
     "displayName": "Baku",
+    "answers": ["baku", "baki"],
+    "localNames": ["Bakı"],
     "country": "Azerbaijan",
     "continent": "Asia",
-    "location": {
-      "lat": 40.4093,
-      "lon": 49.8671
-    },
+    "location": { "lat": 40.4093, "lon": 49.8671 },
     "found": false,
-    "category": {
-      "name": "Continent",
-      "value": "Asia"
-    }
+    "category": { "name": "Continent", "value": "Asia" }
   }
 ]}

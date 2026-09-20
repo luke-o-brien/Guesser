@@ -91,10 +91,11 @@ const generateProgress = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const matchedStation = game.mapData.find(
-      (station) =>
-        station.name.toLowerCase() === guess.toLowerCase() ||
-        station.displayName.toLowerCase() === guess.toLowerCase(),
+
+    const matchedStation = game.mapData.find((obj) =>
+      obj.answers.some(
+        (answer) => answer.toLowerCase() === guess.toLowerCase(),
+      ),
     );
 
     if (matchedStation && matchedStation.found !== true) {
